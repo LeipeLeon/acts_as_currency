@@ -1,0 +1,3 @@
+sqlite3:
+  :adapter: sqlite3
+  :dbfile: vendor/plugins/acts_as_currency/spec/db/acts_as_currency.sqlite3.db

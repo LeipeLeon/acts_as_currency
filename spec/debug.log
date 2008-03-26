@@ -1,0 +1,37 @@
+# Logfile created on Wed Mar 26 02:19:10 -0400 2008 by /
+  [4;36;1mSQL (0.000264)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.003154)[0m   [0mCREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.002144)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001842)[0m   [0mUPDATE schema_info SET version = 0[0m
+  [4;36;1mSQL (0.000247)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: no such table: products: DROP TABLE products[0m
+  [4;36;1mSQL (0.002771)[0m   [0;1mCREATE TABLE products ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255) DEFAULT NULL, "quantity" int DEFAULT NULL, "price" decimal DEFAULT NULL, "discount_price" decimal DEFAULT NULL) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: no such table: consultants: DROP TABLE consultants[0m
+  [4;36;1mSQL (0.002657)[0m   [0;1mCREATE TABLE consultants ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) DEFAULT NULL, "hourly_rate" decimal DEFAULT NULL) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.002893)[0m   [0;1mUPDATE schema_info SET version = 0[0m
+  [4;36;1mSQL (0.000240)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.003287)[0m   [0mDROP TABLE products[0m
+  [4;36;1mSQL (0.002525)[0m   [0;1mCREATE TABLE products ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255) DEFAULT NULL, "quantity" int DEFAULT NULL, "price" decimal DEFAULT NULL, "discount_price" decimal DEFAULT NULL) [0m
+  [4;35;1mSQL (0.002686)[0m   [0mDROP TABLE consultants[0m
+  [4;36;1mSQL (0.003295)[0m   [0;1mCREATE TABLE consultants ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) DEFAULT NULL, "hourly_rate" decimal DEFAULT NULL) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.002115)[0m   [0;1mUPDATE schema_info SET version = 0[0m
+  [4;35;1mSQL (0.000601)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000347)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.002315)[0m   [0mDROP TABLE products[0m
+  [4;36;1mSQL (0.002372)[0m   [0;1mCREATE TABLE products ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255) DEFAULT NULL, "quantity" int DEFAULT NULL, "price" decimal DEFAULT NULL, "discount_price" decimal DEFAULT NULL) [0m
+  [4;35;1mSQL (0.002998)[0m   [0mDROP TABLE consultants[0m
+  [4;36;1mSQL (0.002903)[0m   [0;1mCREATE TABLE consultants ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) DEFAULT NULL, "hourly_rate" decimal DEFAULT NULL) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.002485)[0m   [0;1mUPDATE schema_info SET version = 0[0m
+  [4;36;1mSQL (0.000250)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.003018)[0m   [0mDROP TABLE products[0m
+  [4;36;1mSQL (0.002419)[0m   [0;1mCREATE TABLE products ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255) DEFAULT NULL, "quantity" int DEFAULT NULL, "price" decimal DEFAULT NULL, "discount_price" decimal DEFAULT NULL) [0m
+  [4;35;1mSQL (0.002720)[0m   [0mDROP TABLE consultants[0m
+  [4;36;1mSQL (0.002945)[0m   [0;1mCREATE TABLE consultants ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) DEFAULT NULL, "hourly_rate" decimal DEFAULT NULL) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.002367)[0m   [0;1mUPDATE schema_info SET version = 0[0m
