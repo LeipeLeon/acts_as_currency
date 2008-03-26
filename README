@@ -1,0 +1,44 @@
+ActsAsCurrency
+==============
+
+There's a problem in ActiveRecord.  Let's say you have a field in a table that's supposed to be money, for example:
+
+add_column :products, :price, :decimal
+
+and you have an entry form on your website for admins to add products.  Without even thinking, they will likely type the price with a dollar sign ('$').  If you follow the principal of least surprise, you will need to support this scenario.  However, since ActiveRecord interprets the type as a decimal (since that's how it is in the database), you will get a silent fail in which all of your prices are 0!  This is because all characters after the first non-number are interpreted as 0.  That's where acts_as_currency comes in.  Add it to your model and pass in any price fields, and they will all be able to take a '$'.  Hope you enjoy!  If you have any questions, please feel free to contact me at joe@faithfulgeek.org.
+
+Install
+=======
+
+This project is hosted on github.  There are a few options for installing it.
+
+#1 Using git-rails gem
+	- This is by far the easiest method.  Install git-rails by issuing:
+			sudo gem install git-rails (Windows: gem install git-rails)
+			git-rails install git://github.com/faithfulgeek/acts_as_currency.git
+
+#2 Using git-clone
+	- This method requires that you have Git installed (might as well do it, it's a great alternative to svn)
+	- Assumes your current working directory is your rails app root
+	cd vendor/plugins
+	git-clone git://github.com/faithfulgeek/acts_as_currency.git acts_as_currency
+	
+#3 Source Tarball
+	- If you cannot access Git at all, use this link http://github.com/faithfulgeek/acts_as_currency/tarball/master to download the source tarball
+	cd vendor/plugins
+	mkdir acts_as_currency && cd acts_as_currency
+	tar xvcf faithfulgeek-acts-as-currency-master.tar.gz
+
+Troubles?  Let me know!  joe@faithfulgeek.org
+
+Example
+=======
+
+class Product < ActiveRecord::Base
+	acts_as_currency :price, :discount_price
+end
+
+For an example of the problem and how acts_as_currency solves it, please see specs/acts_as_currency_spec.rb.  If you have rspec installed you can play around with different values and see how it all works.
+
+
+Copyright (c) 2008 Joe Fiorini, released under the MIT license
